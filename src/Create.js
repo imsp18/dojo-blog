@@ -5,7 +5,7 @@ const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('yoshi');
-    const [isPending, setIsPending] = useState(false); 
+    const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -24,7 +24,6 @@ const Create = () => {
             navigate('/');
         })
     }
-
 
     return (
         <div className="create">
@@ -51,8 +50,8 @@ const Create = () => {
                     <option value="mario">mario</option>
                     <option value="yoshi">yoshi</option>
                 </select>
-                { !isPending && <button>Add Blog</button>}
-                { isPending && <button disabled>Adding Blog...</button>}
+                {!isPending && <button>Add Blog</button>}
+                {isPending && <button disabled>Adding Blog...</button>}
             </form>
         </div>
     );
